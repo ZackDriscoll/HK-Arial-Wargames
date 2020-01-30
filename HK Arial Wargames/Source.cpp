@@ -14,14 +14,13 @@ int main()
 	//Seed random number generator
 	srand(static_cast<unsigned int>(time(0)));
 
-	//Init the simulation value
+	//Initialize the simulation value
 	int AI_binary_searchGridLowNumber = 1;
 	int AI_binary_searchGridHighNumber = 64;
 	int human_searchGridLowNumber = 1;
 	int human_searchGridHighNumber = 64;
 
-	//Random number between 1 and 64
-	//int secretNumber = rand() % 64 + 1;
+	//Tracks the number of predictions and the current prediction value
 	int AI_Binary_Number_of_Predictions = 0;
 	int AI_binary_current_location_prediction = 0;
 	int human_Number_of_Predictions = 0;
@@ -61,6 +60,8 @@ int main()
 		}
 	} while (human_current_location_prediction != actualTargetLocation);
 	//************** End Human Tries to find the target ******************
+
+	//Transition to the next guessing algorithm
 	cout << "The Human is finished, to launch the Binary AI ";
 	system("Pause");
 	
@@ -90,6 +91,8 @@ int main()
 		}
 	} while (AI_binary_current_location_prediction != actualTargetLocation);
 	//************** End Binary AI Tries to find the target ******************
+
+
 	
 	return 0;
 }
